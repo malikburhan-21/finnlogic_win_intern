@@ -1,0 +1,37 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Popup Overlay HTML5 | CSS3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="fluid__container">
+    <div class="inner__container">
+      <div class="close__btn" id="close__btn">
+        <img decoding="async" src="images/close.png" alt="close button" title="close button">
+      </div>
+      <div class="text">
+        <h6>today only</h6>
+        <h1>amazon echo</h1>
+        <p>
+          amazon echo is designed around your voice, it's hands-free and always on, with seven microphones and beam-forming technology, echo can hear you from across the room-even while music is playing.
+        </p>
+      </div>
+      <div class="image__product">
+        <img decoding="async" src="images/bg.png" alt="amazon echo" title="amazon echo">
+      </div>
+      <div class="cta__buttons">
+        <button class="btn__outline">
+          learn more about echo
+        </button>
+        <button class="btn__primary">
+          get one
+        </button>
+      </div>
+    </div> 
+  </div>
+
+</body>
+</html>
+
