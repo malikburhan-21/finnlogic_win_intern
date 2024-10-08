@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no">
+    <link rel="stylesheet" href="rscc.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <div class="col col-1">
+                <input type="checkbox" id="opensidebarmenu">
+                <label for="opensidebarmenu" class="sideicontoggle">
+                  <div class="spinner top"></div>
+                  <div class="spinner middle"></div>
+                  <div class="spinner bottom"></div>
+                </label>
+                <div id="sidebarmenu">
+                  <ul class="menu">
+                      <li><a href="#">Home</a></li>
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Gallery</a></li>
+                      <li><a href="#">Products</a></li>
+                      <li><a href="#">Contact</a></li>
+                  </ul>
+                </div>
+             </div>
+            <div class="col" class="wname">
+               <h3 id="FASHION">FASHION HUB</h3>
+            </div>
+            <div class="col col-lg-6">
+                <form>
+                <input type="text" placeholder="search..." class="s">
+                <button type="submit" class="b" style="float: right; border: none;">
+                  <i class="fa fa-search" aria-hidden="true" id="m"></i>
+                </button>
+                </form>
+            </div>
+            <div class="col col-1">
+                <a href="#" class="cart-icon" data-bs-toggle="modal" data-bs-target="#cartModal">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span id="cart-count" class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+     </div>
+</div>
+
+<!-- Updated Navigation Bar with Dropdown Menus -->
+<div class="container" id="menubar">
+    <div class="row">
+        <div class="col dropdown">
+          <a href="#" class="dropdown-toggle" id="trendingDropdown" data-bs-toggle="dropdown" aria-expanded="false">Trending</a>
+          <ul class="dropdown-menu" aria-labelledby="trendingDropdown">
+            <li><a class="dropdown-item" href="#">Trending Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Trending Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Trending XYZ</a></li>
+          </ul>
+        </div>
+        <div class="col dropdown">
+          <a href="#" class="dropdown-toggle" id="saleDropdown" data-bs-toggle="dropdown" aria-expanded="false">Sale</a>
+          <ul class="dropdown-menu" aria-labelledby="saleDropdown">
+            <li><a class="dropdown-item" href="#">Sale Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Sale Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Sale XYZ</a></li>
+          </ul>
+        </div>
+        <div class="col dropdown">
+          <a href="#" class="dropdown-toggle" id="winterDropdown" data-bs-toggle="dropdown" aria-expanded="false">Winter</a>
+          <ul class="dropdown-menu" aria-labelledby="winterDropdown">
+            <li><a class="dropdown-item" href="#">Winter Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Winter Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Winter XYZ</a></li>
+          </ul>
+        </div>
+        <div class="col dropdown">
+          <a href="#" class="dropdown-toggle" id="summerDropdown" data-bs-toggle="dropdown" aria-expanded="false">Summer</a>
+          <ul class="dropdown-menu" aria-labelledby="summerDropdown">
+            <li><a class="dropdown-item" href="#">Summer Item 1</a></li>
+            <li><a class="dropdown-item" href="#">Summer Item 2</a></li>
+            <li><a class="dropdown-item" href="#">Summer XYZ</a></li>
+          </ul>
+        </div>
+    </div>
+</div>
+
+<!-- Product Cards -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card" style="width: 100%;">
+                <img src="watch2.jpeg" class="card-img-top" alt="Watch" style="height: 250px; object-fit: cover;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Watch</h5>
+                  <p class="pric">Price: $20</p>
+                  <p>Size: 
+                      <select>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                      </select>
+                  </p>
+                  <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Watch', 20, 'watch2.jpeg')">Add to cart</button>
+                  <button class="btn btn-success buy-btn" onclick="buyNow('Watch', 20)">Buy</button>
+                </div>
+            </div>               
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card" style="width: 100%;">
+              <img src="trousers2.webp" class="card-img-top" alt="trousers2.webp" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Parasuit</h5>
+                <p class="pric">Price: $50</p>
+                <p>Size: 
+                    <select>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </p>
+                <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Parasuit', 20, 'trousers2.webp')">Add to cart</button>
+                <button class="btn btn-success buy-btn" onclick="buyNow('Parasuit', 20)">Buy</button>
+              </div>
+          </div>               
+      </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card" style="width: 100%;">
+                <img src="istockphoto-2010985044-612x612.jpg" class="card-img-top" alt="Sweater" style="height: 250px; object-fit: cover;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Sweater</h5>
+                  <p class="pric">Price: $299</p>
+                  <p>Size: 
+                      <select>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                      </select>
+                  </p>
+                  <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Sweater', 299, 'istockphoto-2010985044-612x612.jpg')">Add to cart</button>
+                  <button class="btn btn-success buy-btn" onclick="buyNow('Sweater', 299)">Buy</button>
+                </div>
+            </div>               
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card" style="width: 100%;">
+              <img src="winter1.webp" class="card-img-top" alt="T-shirt" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h5 class="card-title">T-Shirt</h5>
+                <p class="pric">Price: $299</p>
+                <p>Size: 
+                    <select>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </p>
+                <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('T-Shirt', 299, 'winter1.webp')">Add to cart</button>
+                <button class="btn btn-success buy-btn" onclick="buyNow('T-Shirt', 299)">Buy</button>
+              </div>
+          </div>               
+      </div>
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="card" style="width: 100%;">
+            <img src="whl5.webp" class="card-img-top" alt=" Blue T-shirt" style="height: 250px; object-fit: cover;">
+            <div class="card-body text-center">
+              <h5 class="card-title">BLlue T-Shirt</h5>
+              <p class="pric">Price: $299</p>
+              <p>Size: 
+                  <select>
+                      <option value="M">M</option>
+                      <option value="L">L</option>
+                      <option value="XL">XL</option>
+                      <option value="XXL">XXL</option>
+                  </select>
+              </p>
+              <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Blue T-Shirt', 299, 'whl5.webp')">Add to cart</button>
+              <button class="btn btn-success buy-btn" onclick="buyNow('Blue T-Shirt', 299)">Buy</button>
+            </div>
+        </div>               
+        </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+          <div class="card" style="width: 100%;">
+              <img src="winter4.webp" class="card-img-top" alt=" Jeans Jacket" style="height: 250px; object-fit: cover;">
+              <div class="card-body text-center">
+                <h5 class="card-title">Jeans Jacket</h5>
+                <p class="pric">Price: $299</p>
+                <p>Size: 
+                    <select>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                        <option value="XXL">XXL</option>
+                    </select>
+                </p>
+                <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Jeans Jacket', 299, 'winter4.webp')">Add to cart</button>
+                <button class="btn btn-success buy-btn" onclick="buyNow('Jeans Jacket', 299)">Buy</button>
+              </div>
+          </div>               
+          </div>
+          <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card" style="width: 100%;">
+                <img src="winter7.jpg" class="card-img-top" alt="Jacket" style="height: 250px; object-fit: cover;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Jacket</h5>
+                  <p class="pric">Price: $299</p>
+                  <p>Size: 
+                      <select>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                      </select>
+                  </p>
+                  <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Jacket', 299, 'winter7.jpg')">Add to cart</button>
+                  <button class="btn btn-success buy-btn" onclick="buyNow('Jacket', 299)">Buy</button>
+                </div>
+            </div>               
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+              <div class="card" style="width: 100%;">
+                  <img src="whl3.webp" class="card-img-top" alt="White Sweater" style="height: 250px; object-fit: cover;">
+                  <div class="card-body text-center">
+                    <h5 class="card-title">White Sweater</h5>
+                    <p class="pric">Price: $299</p>
+                    <p>Size: 
+                        <select>
+                            <option value="M">M</option>
+                            <option value="L">L</option>
+                            <option value="XL">XL</option>
+                            <option value="XXL">XXL</option>
+                        </select>
+                    </p>
+                    <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('White Sweater', 299, 'whl3.webp')">Add to cart</button>
+                    <button class="btn btn-success buy-btn" onclick="buyNow('White Sweater', 299)">Buy</button>
+                  </div>
+              </div>               
+              </div>
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card" style="width: 100%;">
+                <img src="menssweater7.jpg" class="card-img-top" alt="Sweater" style="height: 250px; object-fit: cover;">
+                <div class="card-body text-center">
+                  <h5 class="card-title">Wite Warmer</h5>
+                  <p class="pric">Price: $20</p>
+                  <p>Size: 
+                      <select>
+                          <option value="M">M</option>
+                          <option value="L">L</option>
+                          <option value="XL">XL</option>
+                          <option value="XXL">XXL</option>
+                      </select>
+                  </p>
+                  <button class="btn btn-primary add-to-cart-btn" onclick="addToCart('Wite Warmer', 20, 'menssweater7.jpg')">Add to cart</button>
+                  <button class="btn btn-success buy-btn" onclick="buyNow('Wite Warmer', 20)">Buy</button>
+                </div>
+            </div>               
+        </div>
+    </div>
+</div>
+
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Your Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <ul id="cart-items" class="list-group">
+          <!-- Cart items will be injected here -->
+        </ul>
+        <div id="cart-total">
+          <h6>Total: $<span id="total-price">0</span></h6>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    let cartCount = 0;
+    let cartItems = [];
+
+    function addToCart(productName, productPrice, productImage) {
+        cartItems.push({ name: productName, price: productPrice, image: productImage });
+        cartCount++;
+        document.getElementById('cart-count').textContent = cartCount;
+        updateCartModal();
+    }
+
+    function updateCartModal() {
+        const cartItemsList = document.getElementById('cart-items');
+        const totalPriceElement = document.getElementById('total-price');
+        let totalPrice = 0;
+        cartItemsList.innerHTML = ''; 
+
+        cartItems.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('list-group-item', 'd-flex', 'align-items-center');
+
+            const img = document.createElement('img');
+            img.src = item.image;
+            img.alt = item.name;
+            img.style.width = '50px'; 
+            img.style.height = '50px';
+            img.style.marginRight = '10px';
+
+            const text = document.createElement('span');
+            text.textContent = `${item.name} - $${item.price}`;
+
+            li.appendChild(img);
+            li.appendChild(text);
+            cartItemsList.appendChild(li);
+            totalPrice += item.price;
+        });
+
+        totalPriceElement.textContent = totalPrice.toFixed(2);
+    }
+
+    function buyNow(productName, productPrice) {
+        if (confirm(`Are you sure you want to buy ${productName} for $${productPrice}?`)) {
+            alert(`${productName} purchased successfully!`);
+        }
+    }
+</script>
+</body>
+</html>
